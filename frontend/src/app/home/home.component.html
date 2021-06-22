@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<div class="topnav" id="myTopnav">
+    <a class="navbar-brand" href="/home/dashboard">Instagrã <i class="fas fa-camera-retro"></i></a>
+    <a routerLink="/home/myphotos" *ngIf="isLoggedIn">My Photos</a>
+    <a routerLink="/home/favphotos" *ngIf="isLoggedIn">Fav Photos</a>
+    <!-- Qualquer colocado depois vai para o fim da navbar-->
+    <a class="loginout" routerLink="/login" *ngIf="!isLoggedIn">Login</a>
+    <a class="regist" routerLink="/register" *ngIf="!isLoggedIn">Register</a>
+    <a tabindex="0" class="loginout" (click)="logOut()" *ngIf="isLoggedIn">SignOut</a>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,106 @@
+.flex-container {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0px;
+}
+
+.foto-container {
+    padding: 4px 4px;
+    background-color: #222;
+}
+
+.nome {
+    text-align: left;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    max-width: 700px;
+    max-height: 60vh;
+}
+
+.descricao {
+    padding-top: 10px;
+    max-width: 500px;
+}
+
+
+/* imagem */
+
+img {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* barra de fundo */
+
+.bot_bar {
+    background-color: #333;
+    overflow: hidden;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    border-radius: 0px;
+    padding-top: 2px;
+}
+
+
+/* style a */
+
+.bot_bar a {
+    background-color: #333;
+    color: #f2f2f2;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.bot_bar a .btn {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px 9px;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+
+/* quando ativo */
+
+.bot_bar a .btn:active,
+.bot_bar a .btn:hover {
+    background-color: grey;
+    color: white;
+}
+
+.bot_bar .split {
+    /* move a partir deste para o fim*/
+    margin-left: auto;
+}
+
+
+/* fav*/
+
+#saved {
+    display: none;
+}
+
+
+/* para o mobile*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* esconde o div no mobile*/
+    .hideMobile {
+        display: none;
+    }
+}

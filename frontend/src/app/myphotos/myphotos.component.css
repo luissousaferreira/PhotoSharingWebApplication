@@ -1,0 +1,248 @@
+.myPhotos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: right;
+}
+
+.photo-list {
+    max-width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.photos img {
+    transition: transform 2s;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.photo-list .photos {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.submitPhoto label {
+    margin-bottom: 4px;
+    max-width: 220px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    border: none;
+    margin-right: 5px;
+}
+
+.submitPhoto label:focus,
+.submitPhoto label:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.multiple label:focus,
+.multiple label:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#name {
+    margin-right: 5px;
+    top: 108px;
+    right: 2px;
+    max-width: 220px;
+    min-height: 30px;
+    border-radius: 0px;
+    border: none;
+    text-align: center;
+}
+
+#description {
+    margin-right: 5px;
+    top: 142px;
+    right: 2px;
+    max-width: 220px;
+    min-height: 30px;
+    border-radius: 0px solid black;
+    text-align: center;
+    border: none;
+}
+
+#upload_Photo {
+    margin: auto;
+    top: 176px;
+    right: 2px;
+    max-width: 220px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    border: none;
+}
+
+.photo_thumbnail img {
+    width: auto;
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    right: 100px;
+    transform: translateX(-50%);
+}
+
+.brightness {
+    background-color: white;
+    display: inline-block;
+}
+
+.folder {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    font-size: 18px;
+    max-width: 220px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+}
+
+ul:not(button) {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-height: 650px;
+    background-color: #5F77FC;
+}
+
+:host::ng-deep #photosFolder li {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    padding: 10px;
+    justify-content: center;
+}
+
+:host::ng-deep #photosFolder li img {
+    float: left;
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin: 5px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+#upload_Photo_Multiple {
+    margin: auto;
+    top: 54px;
+    right: 2px;
+    height: 50px;
+    max-width: 220px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    border: none;
+}
+
+#upload_Photo_Multiple:hover,
+#upload_Photo_Multiple:focus,
+#upload_Photo_Single:hover,
+#upload_Photo_Single:focus {
+    color: black;
+    cursor: pointer;
+}
+
+#upload_Photo_Single {
+    margin: auto;
+    top: 142px;
+    right: 2px;
+    height: 50px;
+    max-width: 220px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 0px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #60a3bc;
+    border: none;
+}
+
+#description_Multiple {
+    margin: auto;
+    top: 108px;
+    right: 2px;
+    max-width: 220px;
+    height: 30px;
+    border-radius: 0px;
+    border: none;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.all {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.folderPhotos {
+    display: flex;
+    flex-direction: column;
+}

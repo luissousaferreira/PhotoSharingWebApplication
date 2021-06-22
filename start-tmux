@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# start new detached tmux session, run backend
+tmux new-session -d -s srvs 'cd backend;DEBUG=backend:* npm start';
+#split the detached tmux session
+tmux split-window;
+# corre front-end nessa split-window
+tmux send 'cd frontend;ng serve --port 3051 --host 0.0.0.0 --disableHostCheck' ENTER;
+#tmux a;

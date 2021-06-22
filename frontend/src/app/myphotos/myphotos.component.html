@@ -1,0 +1,59 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="myPhotos">
+
+    <div class="all">
+        <div class="submitPhoto">
+
+            <input id="photo-image" type="file" (change)="readURL($event)" (keypress)="readURL($event)" accept="image/*" />
+            <label tabindex='0' id="photo-image-icon" for="photo-image" style=" font-size: medium;">
+            <span  class="material-icons">add_photo_alternate</span>
+            &nbsp;Upload Photo
+        </label>
+            <div>
+                <input type="box" id="name" placeholder="Name Photo" maxlength="100" #name />
+            </div>
+            <div>
+                <input type="box" id="description" placeholder="Description Photo" maxlength="500" #description_single />
+            </div>
+
+            <div class="upload_Photo">
+                <button id="upload_Photo" style=" font-size: medium;" (click)="uploadPhoto(name.value, description_single.value)">Upload <i
+                    class="fa fa-upload fa-fw" style="font-size:24px"></i>
+            </button>
+            </div>
+
+            <div class="photo_thumbnail" *ngIf="imageSrc">
+                <img src="{{imageSrc}}" alt="your image" />
+            </div>
+        </div>
+
+        <div class="multiple">
+
+            <input id="folderpicker" name="folder" type="file" (change)="getReadyForFolder($event)" webkitdirectory multiple />
+            <label tabindex='0' for="folderpicker" class="folder" style=" font-size: medium;">
+                <span class="material-icons">add_photo_alternate</span>
+                &nbsp;Upload Folder
+            </label>
+
+            <button id="upload_Photo_Multiple" (click)="uploadSeveralPhoto();" style=" font-size: medium;">Upload Photos
+                <i class="fa fa-upload fa-fw" style="font-size:20px"></i>
+            </button>
+
+            <input type="box" id="description_Multiple" placeholder="Description Photo" maxlength="500" #description_multiple />
+            <button id="upload_Photo_Single" (click)="uploadPhotoSingle(description_multiple.value);" style=" font-size: medium;">Upload
+                <i class="fa fa-upload fa-fw" style="font-size:18px"></i>
+            </button>
+
+
+        </div>
+    </div>
+    <ul id="photosFolder">
+    </ul>
+    <div class="photo-list">
+        <a *ngFor="let photo of myPhotos" class="photos" [routerLink]="['/home/photo', photo._id]">
+            <img src="{{photo.image}}">
+        </a>
+    </div>
+</div>

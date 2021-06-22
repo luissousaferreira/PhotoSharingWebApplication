@@ -1,0 +1,14 @@
+<div class="RecentPhotos">
+    <div class="orderSelector">
+        <label>Order By:</label>
+        <select name="photosSelector" id="photosSelector" #selector (change)=setSelected(selector.value)>
+        <option value="date">Most Recent</option>
+        <option value="likes">Most Liked</option>
+      </select>
+    </div>
+    <div class="photo-list">
+        <a *ngFor="let photo of selectedPhotos" class="photos" [routerLink]="['/home/photo', photo._id]">
+            <img src="{{photo.image}}">
+        </a>
+    </div>
+</div>

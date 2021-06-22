@@ -1,0 +1,5 @@
+<div class="favPhotos">
+    <a *ngFor="let photo of favPhotos" class="photos" [routerLink]="['/home/photo', photo._id]">
+        <img src="{{photo.image}}">
+    </a>
+</div>

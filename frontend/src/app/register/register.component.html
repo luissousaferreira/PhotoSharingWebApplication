@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<div class="wrapper">
+    <div id="formContent">
+        <br>
+        <a routerLink="/home/dashboard" class="register logo">
+            Instagrã&nbsp;
+            <i class="fas fa-camera-retro"></i>
+        </a>
+        <br><br>
+        <p class="register">
+            Register
+        </p>
+        <form>
+            <input type="text" id="userName" name="userName" placeholder="userName" #userName>
+            <input type="text" id="password" name="password" placeholder="password" #password>
+            <input type="submit" value="Register" (click)="register(userName.value, password.value)">
+            <br>
+            <a class="reg" routerLink="/login">Login</a>
+            <p id="requisitos">Password needs to have at least: 1 uppercase letter, 1 lowercase letter and 1 number</p>
+        </form>
+    </div>
+</div>

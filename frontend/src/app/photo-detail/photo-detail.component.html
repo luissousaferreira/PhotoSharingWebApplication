@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<div class="flex-container" *ngIf="photo">
+    <div class="foto-container">
+        <div class="nome">
+            <!-- nome -->
+            <h2>{{photo.name}}</h2>
+        </div>
+        <!-- imagem -->
+        <div class="imagem">
+            <img src="{{photo.image}}">
+        </div>
+        <!-- descrição-->
+        <div class="descricao">
+            <p>{{photo.description}}</p>
+        </div>
+        <div class="bot_bar">
+            <a id="btn-like">
+                <button tabindex="0" class="btn" (click)="addLike()">
+                    <!-- dar gosto-->
+                    <i id="iconHeart" class="fa fa-heart" aria-hidden="true"></i>
+                </button>
+            </a>
+            <a id="likes">
+                <!-- numero de gostos-->
+                &nbsp;{{photo.like}} Likes
+            </a>
+            <a class="split"></a>
+            <a id="btn-trash" *ngIf="isOwner">
+                <!-- remover foto-->
+                <button tabindex="0" class="btn" (click)="removePhoto()"> 
+                    <i id="iconTrash" class="fa fa-trash"></i>
+                    <span class="hideMobile">&nbsp;Delete</span>
+                </button>
+            </a>
+            <a id="btn-fav" *ngIf="isLoggedIn">
+                <!-- dar favorito-->
+                <button tabindex="0" class="btn" (click)="addFav()">
+                    <i id="iconFav" class="fa fa-star"></i>
+                    <span class="hideMobile">
+                        &nbsp;Save<span id="saved">d</span>
+                    </span>
+                    <span id="saved">d</span>
+                </button>
+            </a>
+            <!-- copiar link -->
+            <a id="btn-link">
+                <button tabindex="0" class="btn" (click)="copyLink()">
+                    <i class='fa fa-link'></i>
+                    <span class="hideMobile">&nbsp;Share</span>
+                </button>
+            </a>
+            <!-- Voltar atrás-->
+            <a id="btn-goback">
+                <button tabindex="0" class="btn" (click)="goBack()">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    <span class="hideMobile">&nbsp;Go Back</span>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
